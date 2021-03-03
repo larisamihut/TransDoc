@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/driver_image"
+                android:layout_width="64dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="20dp" />
+
+            <TextView
+                android:id="@+id/loading"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/name_dots"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapSentences"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/address_dots"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/address"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords"
+                    android:paddingStart="20dp"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    tools:ignore="RtlSymmetry" />
+
+
+                <TextView
+                    android:id="@+id/time_slot_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/time_slot_dots"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/time_slot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/time_slot"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_background"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/date_dots"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/date"
+                    android:importantForAutofill="no"
+                    android:inputType="date"
+                    android:paddingStart="20dp"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="true"
+                    android:background="@android:drawable/editbox_background"
+                    tools:ignore="RtlSymmetry" />
+
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/fui_next_default"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

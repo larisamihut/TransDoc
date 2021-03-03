@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    app:startDestination="@id/ordersMainFragment">
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.application.transdoc.orders.activeOrders.OrdersFragment"
+        tools:layout="@layout/fragment_orders"
+        android:label="Orders" />
+    <fragment
+        android:id="@+id/driversFragment"
+        android:name="com.application.transdoc.elements.drivers.DriversFragment"
+        tools:layout="@layout/fragment_drivers"
+        android:label="Drivers" />
+    <fragment
+        android:id="@+id/carsFragment"
+        android:name="com.application.transdoc.elements.cars.CarsFragment"
+        tools:layout="@layout/fragment_cars"
+        android:label="Cars" />
+    <fragment
+        android:id="@+id/companiesFragment"
+        android:name="com.application.transdoc.elements.companies.CompaniesFragment"
+        tools:layout="@layout/fragment_cars"
+        android:label="Companies" />
+    <fragment
+        android:id="@+id/ordersMainFragment"
+        android:name="com.application.transdoc.orders.OrdersMainFragment"
+        tools:layout="@layout/fragment_main_orders"
+        android:label="OrdersMain" >
+        <action
+            android:id="@+id/action_ordersMainFragment_to_new_order_navigation"
+            app:destination="@id/new_order_navigation" />
+    </fragment>
+    <navigation android:id="@+id/new_order_navigation"
+        app:startDestination="@id/addNewOrderReceiveOrderFragment">
+        <fragment
+            android:id="@+id/addNewOrderDescribeGoodsFragment"
+            android:name="com.application.transdoc.orders.newOrder.decribeGoods.DescribedGoodsFragment"
+            android:label="AddNewOrderDescribeGoodsFragment"
+            tools:layout="@layout/fragment_add_new_order_describe_goods">
+            <action
+                android:id="@+id/action_addNewOrderDescribeGoodsFragment_to_addNewOrderLoadingFragment"
+                app:destination="@id/addNewOrderLoadingFragment" />
+            <argument
+                android:name="documentId"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/addNewOrderContactFragment"
+            android:name="com.application.transdoc.orders.newOrder.contact.ContactFragment"
+            android:label="AddNewOrderContactFragment"
+            tools:layout="@layout/fragment_add_new_order_contact">
+            <action
+                android:id="@+id/action_addNewOrderContactFragment_to_addNewOrderDescribeGoodsFragment"
+                app:destination="@id/addNewOrderDescribeGoodsFragment" />
+            <argument
+                android:name="documentId"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/addNewOrderReceiveOrderFragment"
+            android:name="com.application.transdoc.orders.newOrder.receiveOrder.ReceivedOrderFragment"
+            android:label="AddNewOrderReceiveOrderFragment"
+            tools:layout="@layout/fragment_add_new_order_receive_order">
+            <action
+                android:id="@+id/action_addNewOrderReceiveOrderFragment_to_addNewOrderContactFragment"
+                app:destination="@id/addNewOrderContactFragment" />
+            <argument
+                android:name="documentId"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/addNewOrderLoadingFragment"
+            android:name="com.application.transdoc.orders.newOrder.loading.LoadingFragment"
+            android:label="AddNewOrderLoadingFragment"
+            tools:layout="@layout/fragment_add_new_order_loading">
+            <action
+                android:id="@+id/action_addNewOrderLoadingFragment_to_addNewOrderUnloadingFragment"
+                app:destination="@id/addNewOrderUnloadingFragment" />
+            <argument
+                android:name="documentId"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/addNewOrderUnloadingFragment"
+            android:name="com.application.transdoc.orders.newOrder.unloading.UnloadingFragment"
+            android:label="AddNewOrderUnloadingFragment"
+            tools:layout="@layout/fragment_add_new_order_loading">
+            <argument
+                android:name="documentId"
+                app:argType="string" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_ordersMainFragment"
+            app:destination="@id/ordersMainFragment" />
+    </navigation>
+    
+</navigation>

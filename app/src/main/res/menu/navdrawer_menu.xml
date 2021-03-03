@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ordersMainFragment"
+            android:title="@string/orders"
+            android:icon="@drawable/ic_baseline_assignment_24"/>
+    </group>
+
+    <item android:title="@string/configure_elements">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/driversFragment"
+                    android:title="@string/drivers"
+                    android:icon="@drawable/ic_baseline_face_24"/>
+                <item
+                    android:id="@+id/carsFragment"
+                    android:title="@string/cars"
+                    android:icon="@drawable/ic_baseline_local_shipping_24"/>
+                <item
+                    android:id="@+id/companiesFragment"
+                    android:title="@string/companies"
+                    android:icon="@drawable/ic_baseline_home_work_24"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/account">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/signOut"
+                    android:title="@string/sign_out"
+                    android:icon="@drawable/ic_baseline_person_off_24"/>
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

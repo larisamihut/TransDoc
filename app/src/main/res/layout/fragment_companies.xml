@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/fragment_companies"
+    android:background="@color/cardview_shadow_end_color">
+
+    <data>
+        <variable
+            name="companiesViewModel"
+            type="com.application.transdoc.elements.companies.CompaniesViewModel" />
+    </data>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_cars_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="elements.companies.CompaniesFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cardview_shadow_end_color"
+                android:padding="4dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/add_new_car"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_new_car"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="@{() -> companiesViewModel.addNewCompany()}"
+            android:text="@string/add_new_company"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

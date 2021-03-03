@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "618836746085",
+    "project_id": "transdoc-98601",
+    "storage_bucket": "transdoc-98601.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618836746085:android:2f9e1f59f36e40ce5d4b8c",
+        "android_client_info": {
+          "package_name": "com.application.transdoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618836746085-e3lgfd8tp5j59f46shiu2e88amo3fms3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhwzP2T5LW7EIyz-yEx_aPNh88K_3CCMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618836746085-e3lgfd8tp5j59f46shiu2e88amo3fms3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_shadow_end_color"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:textSize="15sp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="6dp"
+                android:text="@string/name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/name_text"
+                android:layout_marginStart="6dp"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_text"
+                android:layout_marginStart="6dp"
+                android:inputType="textCapWords"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/contact_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_edit"
+                android:layout_marginStart="6dp"
+                android:text="@string/contact_person"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_text"
+                android:layout_marginStart="6dp"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/contact_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_text"
+                android:layout_marginStart="6dp"
+                android:inputType="textCapWords"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/nr_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/nr_orc"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nr"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/nr_text"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/nr_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nr_text"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="true"
+                android:textAllCaps="true"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/cui_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nr_edit"
+                android:text="@string/cui"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cui_text"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/cui_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cui_text"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="true"
+                android:textAllCaps="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/edit_button"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_action_edit"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/save_button"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_action_save"
+            android:visibility="gone"
+            app:layout_constraintVertical_bias="0.294" />
+    </LinearLayout>
+</LinearLayout>
